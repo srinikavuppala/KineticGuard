@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s # How often to check the machines
+
+scrape_configs:
+  - job_name: 'kinetic-guard-backend'
+    static_configs:
+      - targets: ['kg_backend:8000'] # Checks FastAPI health endpoint
+
+  - job_name: 'kinetic-guard-celery-worker'
+    static_configs:
+      - targets: ['kg_celery_worker:8080'] # Checks Celery worker stats

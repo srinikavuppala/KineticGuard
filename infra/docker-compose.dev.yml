@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  backend:
+    # In dev mode, we tell uvicorn to auto-reload when code changes
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    # Link the ML models folder so the backend can see the AI brain locally
+    volumes:
+      - ../kinetic-guard-ml/models:/app/models:ro
+
+  worker:
+    # Link the ML models folder to the worker too
+    volumes:
+      - ../kinetic-guard-ml/models:/app/models:ro

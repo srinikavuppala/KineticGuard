@@ -1,0 +1,66 @@
+# ==========================================
+# ENVIRONMENT VARIABLES & SECRETS (CRITICAL)
+# ==========================================
+.env
+```env
+!.env.example
+
+# ==========================================
+# PYTHON (backend & ml)
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+
+# ==========================================
+# MACHINE LEARNING (Prevents crashing GitHub)
+# ==========================================
+*.onnx
+*.pth
+*.h5
+*.pkl
+*.pb
+ml/models/
+ml/datasets/
+ml/data/
+
+# ==========================================
+# REACT / WEB
+# ==========================================
+web/node_modules/
+web/dist/
+web/build/
+web/.env.local
+web/.env.development.local
+
+# ==========================================
+# INFRASTRUCTURE / DOCKER (Databases)
+# ==========================================
+infra/data/
+infra/postgres_data/
+infra/pgdata/
+infra/redis_data/
+
+# ==========================================
+# ANDROID STUDIO
+# ==========================================
+android/.gradle/
+android/local.properties
+android/.idea/
+android/build/
+android/app/build/
+*.apk
+*.aab
+*.iml
+
+# ==========================================
+# OPERATING SYSTEMS & IDES
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/

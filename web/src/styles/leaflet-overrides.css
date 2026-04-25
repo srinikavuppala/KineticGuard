@@ -1,0 +1,2 @@
+/* Import the core Leaflet CSS to fix map tile alignment */
+@import 'leaflet/dist/leaflet.css';
